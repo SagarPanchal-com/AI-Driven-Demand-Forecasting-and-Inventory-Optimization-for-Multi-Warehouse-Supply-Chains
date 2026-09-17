@@ -524,18 +524,20 @@ ai-demand-forecasting-inventory-optimization
 │   └── best_rf_demand_model.pkl
 │
 ├── images
-│   ├── demand_distribution.png
-│   ├── warehouse_distribution.png
-│   ├── category_distribution.png
 │   ├── correlation_heatmap.png
 │   ├── model_comparison.png
+│   ├── actual_vs_predicted_rf.png
 │   ├── feature_importance.png
 │   ├── abc_bar_chart.png
 │   ├── pareto_chart.png
 │   ├── safety_stock_distribution.png
 │   ├── reorder_point_distribution.png
 │   ├── eoq_distribution.png
-│   └── kraljic_matrix.png
+│   ├── eoq_tradeoff_curve.png
+│   ├── inventory_depletion_curve.png
+│   ├── inventory_status_distribution.png
+│   ├── kraljic_matrix.png
+│   └── inventory_policy_distribution.png
 │
 └── README.md
 ```
