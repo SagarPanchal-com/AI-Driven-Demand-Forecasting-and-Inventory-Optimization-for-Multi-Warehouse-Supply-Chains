@@ -1,7 +1,7 @@
 # AI-Driven Demand Forecasting & Inventory Optimization for Multi-Warehouse Supply Chains
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Random-Forest-green)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Random_Forest-green)
 ![Supply Chain](https://img.shields.io/badge/Supply%20Chain-Analytics-orange)
 ![Inventory Management](https://img.shields.io/badge/Inventory-Optimization-red)
 
