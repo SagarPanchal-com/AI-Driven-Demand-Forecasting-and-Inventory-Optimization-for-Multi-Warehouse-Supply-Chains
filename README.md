@@ -548,7 +548,7 @@ ai-demand-forecasting-inventory-optimization
 - Pandas
 - NumPy
 - Scikit-Learn
-- XGBoost
+- Random Forest Regressor
 - Matplotlib
 - Seaborn
 
