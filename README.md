@@ -164,9 +164,7 @@ Several predictive features were created to improve forecasting performance.
 
 ---
 
-# Machine Learning Models
-
-Multiple models were trained and compared.
+## Machine Learning Models Evaluated
 
 | Model |
 |---------|
@@ -174,6 +172,17 @@ Multiple models were trained and compared.
 | Ridge Regression |
 | Random Forest |
 | XGBoost |
+
+After model comparison using forecasting error metrics, **Random Forest** achieved the best overall performance and was selected as the final production forecasting model.
+
+### Final Production Model
+
+✅ Random Forest Regressor
+
+Artifacts Generated:
+
+- Final_Demand.csv
+- best_rf_demand_model.pkl
 
 ---
 
@@ -197,6 +206,19 @@ Model Evaluation
         ▼
 Demand Prediction
 ```
+
+---
+
+# Forecasting Outputs
+
+The forecasting pipeline generates:
+
+| Output | Description |
+|----------|-------------|
+| Final_Demand.csv | Final demand predictions for all SKUs |
+| best_rf_demand_model.pkl | Trained Random Forest forecasting model |
+
+The trained model can be reused for future demand forecasting without retraining.
 
 ---
 
@@ -306,6 +328,31 @@ to identify the most economical order quantity.
 
 ---
 
+# Inventory Status Monitoring
+
+Inventory positions were compared against:
+
+- Safety Stock
+- Reorder Point
+- EOQ
+
+Every SKU was classified into inventory risk categories.
+
+### Inventory Status Categories
+
+| Status | Meaning |
+|----------|----------|
+| Critical | Immediate replenishment required |
+| Warning | Inventory approaching risk zone |
+| Healthy | Adequate inventory available |
+| Overstock | Excess inventory present |
+
+### Business Value
+
+This enables inventory managers to identify stockout risks before they impact operations.
+
+---
+
 # Procurement Analytics
 
 ## Kraljic Matrix
@@ -339,6 +386,39 @@ Measured through:
 
 ---
 
+# Inventory Policy Recommendation Engine
+
+The project does not stop at analytics.
+
+A policy recommendation layer was developed that converts forecasting and inventory analytics into actionable decisions.
+
+### Inputs
+
+- ABC Category
+- EOQ
+- Safety Stock
+- Reorder Point
+- Supplier Reliability
+- Kraljic Category
+
+### Outputs
+
+| Recommendation Type |
+|---------------------|
+| Continuous Review |
+| Weekly Review |
+| EOQ Ordering |
+| Long-Term Supplier Contracts |
+| Strategic Supplier Partnerships |
+| Bulk Procurement |
+| Risk Mitigation Policies |
+
+### Objective
+
+Transform analytical outputs into operational inventory policies.
+
+---
+
 # Key Business Insights
 
 ### Demand Planning
@@ -368,13 +448,33 @@ Measured through:
 
 ---
 
+# Final Analytical Outputs
+
+The project generates the following decision-support datasets:
+
+| File | Purpose |
+|--------|----------|
+| Final_Demand.csv | Forecasted Demand |
+| ABC_Analysis.csv | Inventory Classification |
+| Safety_Stock.csv | Inventory Buffer Calculation |
+| ROP_Analysis.csv | Reorder Planning |
+| EOQ_Analysis.csv | Economic Order Quantity |
+| Inventory_Status_Analysis.csv | Stock Monitoring |
+| Kraljic_Matrix_Analysis.csv | Procurement Strategy |
+| Inventory_Policies.csv | Inventory Policy Recommendations |
+| best_rf_demand_model.pkl | Final ML Model |
+
+---
+
 # Project Outcomes
 
 The project successfully integrates:
 
-✅ Demand Forecasting
+✅ Demand Forecasting using Random Forest
 
-✅ Inventory Classification
+✅ Feature Engineering and Time-Series Analytics
+
+✅ ABC Inventory Classification
 
 ✅ Pareto Analysis
 
@@ -384,9 +484,15 @@ The project successfully integrates:
 
 ✅ EOQ Optimization
 
+✅ Inventory Health Monitoring
+
 ✅ Procurement Risk Assessment
 
-✅ Supply Chain Decision Support
+✅ Kraljic Matrix Analysis
+
+✅ Inventory Policy Recommendation Engine
+
+✅ End-to-End Supply Chain Decision Support System
 
 ---
 
@@ -405,6 +511,17 @@ ai-demand-forecasting-inventory-optimization
 ├── notebooks
 │   ├── Demand_Forcasting.ipynb
 │   └── Inventory_Optimization.ipynb
+│
+├── outputs
+│   ├── Final_Demand.csv
+│   ├── ABC_Analysis.csv
+│   ├── Safety_Stock.csv
+│   ├── ROP_Analysis.csv
+│   ├── EOQ_Analysis.csv
+│   ├── Inventory_Status_Analysis.csv
+│   ├── Kraljic_Matrix_Analysis.csv
+│   ├── Inventory_Policies.csv
+│   └── best_rf_demand_model.pkl
 │
 ├── images
 │   ├── demand_distribution.png
